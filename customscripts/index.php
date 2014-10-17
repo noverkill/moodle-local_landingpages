@@ -1,7 +1,17 @@
 <?php
+
+/****************************************************************
+
+File:     local/landingpages/customscript/index.php
+
+Purpose:  Landingpage redirect page
+
+****************************************************************/
+
 $config = get_config('local_landingpages');
+
 if(isset($USER->profile['landingpage'])){
-	if($config->enabled == 1) { 
+	if($config->enabled == 1) {
 		$landingpage = $USER->profile['landingpage'];
 		if (($USER->currentlogin + $config->userlogindelay) > time()){
 			if(!empty($landingpage)){
@@ -18,12 +28,12 @@ if(isset($USER->profile['landingpage'])){
 							echo html_writer::end_tag('p');
 							echo $OUTPUT->box_end();
 							echo $OUTPUT->footer();
-						exit;
+							exit;
 						}
 					}
 
 				}
-			}	
+			}
 		}
 	}
 }

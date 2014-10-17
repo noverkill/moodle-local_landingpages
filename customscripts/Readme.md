@@ -11,7 +11,7 @@ Some examples are:
       http://my.moodle.site/course/view.php
       http://my.moodle.site/index.php
      http://my.moodle.site/admin            (index.php implied)
- Custom scripts should not include config.php 
+ Custom scripts should not include config.php
 Specify the full directory path to the custom scripts
 
 
